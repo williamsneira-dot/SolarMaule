@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Maule - Energía Solar y Agrivoltaica en la Región del Maule</title>
-    <meta name="description" content="Guía definitiva de Net Billing, energía fotovoltaica y agrivoltaica en la Región del Maule. Ahorra en tu cuenta de luz en Talca, Curicó y Linares.">
+    <title>Solar Maule - Ciencia Solar, Net Billing y Agrivoltaica en la Región del Maule</title>
+    <meta name="description" content="Centro educativo e informativo de energía solar en la Región del Maule. Desde el origen de la luz hasta el Net Billing en Talca, Curicó y Linares.">
     <style>
         :root {
             --primary: #f59e0b;
@@ -23,7 +23,7 @@
         nav .logo { font-weight: bold; font-size: 1.2rem; color: #fff; text-decoration: none; }
         nav .logo .solar-text { color: var(--accent); }
         nav .logo .maule-text { color: #fff; }
-        nav ul { display: flex; list-style: none; gap: 1.5rem; }
+        nav ul { display: flex; list-style: none; gap: 1.5rem; flex-wrap: wrap; }
         nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
         nav ul li a:hover { color: white; }
 
@@ -33,9 +33,9 @@
         header h1 .maule-text { color: #fff; }
         header p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
         
-        .container { max-width: 900px; margin: -3rem auto 3rem auto; background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); position: relative; }
+        .container { max-width: 950px; margin: -3rem auto 3rem auto; background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); position: relative; }
         
-        section { scroll-margin-top: 90px; }
+        section { scroll-margin-top: 90px; margin-bottom: 3rem; }
 
         h2 { color: var(--secondary); font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 3px solid var(--accent); padding-bottom: 0.3rem; display: inline-block; }
         h3 { color: var(--secondary); font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
@@ -47,13 +47,19 @@
         th, td { border: 1px solid #cbd5e1; padding: 12px; text-align: left; }
         th { background-color: #f1f5f9; color: var(--secondary); }
 
-        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
         .card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
         .card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         .card-meta { font-size: 0.8rem; color: #64748b; margin-bottom: 0.5rem; display: flex; justify-content: space-between; }
         .card span.tag { font-size: 0.85rem; color: var(--primary-dark); font-weight: bold; text-transform: uppercase; }
         .card a.btn-leer { display: inline-block; margin-top: 1rem; color: var(--primary-dark); font-weight: bold; text-decoration: none; font-size: 0.9rem; }
         .card a.btn-leer:hover { text-decoration: underline; }
+
+        /* Estilo de banner institucional */
+        .institutional-banner { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 2rem; margin-top: 4rem; text-align: center; }
+        .institutional-banner h3 { color: var(--secondary); margin-bottom: 1rem; }
+        .partners-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; align-items: center; margin-top: 1.5rem; }
+        .partner-badge { background: white; border: 1px solid #e2e8f0; padding: 0.8rem 1.2rem; border-radius: 6px; font-size: 0.85rem; font-weight: bold; color: var(--secondary); box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
 
         footer { text-align: center; padding: 2.5rem 2rem; background: var(--secondary); color: white; font-size: 0.95rem; margin-top: 4rem; }
         footer p { margin-bottom: 0.5rem; }
@@ -75,7 +81,7 @@
     <nav>
         <a href="#top" class="logo"><span class="solar-text">Solar</span><span class="maule-text">Maule</span>.cl</a>
         <ul>
-            <li><a href="#que-es">Qué es</a></li>
+            <li><a href="#origen">Origen y Ciencia</a></li>
             <li><a href="#maule">En el Maule</a></li>
             <li><a href="#net-billing">Net Billing</a></li>
             <li><a href="#noticias">Noticias</a></li>
@@ -85,42 +91,59 @@
 
     <header>
         <h1><span class="solar-text">Solar</span><span class="maule-text">Maule</span>.cl</h1>
-        <p>Impulsando la transición energética, el Net Billing y la agrivoltaica en la Región del Maule.</p>
+        <p>Centro de divulgación científica, transición energética y Net Billing en la Región del Maule.</p>
     </header>
 
     <main class="container">
 
-        <section id="que-es">
-            <h2>¿Qué es la energía solar fotovoltaica?</h2>
-            <p>La energía solar fotovoltaica es una fuente de energía renovable que se obtiene directamente de la radiación solar mediante la utilización de paneles hechos de células de silicio u otros materiales semiconductores. Cuando la luz del sol incide sobre estos paneles, se genera una corriente eléctrica directa (DC) que posteriormente un inversor transforma en corriente alterna (AC), lista para ser utilizada en hogares, industrias o ser inyectada a la red pública.</p>
-            <p>Es una tecnología limpia, silenciosa, de bajo mantenimiento y con una vida útil que supera los 25 años, convirtiéndose en el pilar fundamental de la transición energética global.</p>
+        <!-- NUEVA SECCIÓN EDUCATIVA: ORIGEN Y CIENCIA SOLAR -->
+        <section id="origen">
+            <h2>El Origen y la Ciencia de la Energía Solar</h2>
+            
+            <p>Antes de entender cómo capturamos la energía del sol en nuestros techos o campos, es fundamental comprender qué es nuestra estrella y cómo viaja esa energía hasta nuestro planeta. Este conocimiento es la base para entender por qué la tecnología fotovoltaica es tan potente en nuestra región.</p>
+
+            <h3>1. El Sol: Nuestra estrella nodriza</h3>
+            <p>El Sol es una gigantesca esfera de gas caliente (principalmente hidrógeno y helio) que funciona como un incesante reactor de fusión nuclear en el centro de nuestro sistema solar. Su diámetro es unas 109 veces mayor que el de la Tierra y se encuentra a una distancia promedio de <strong>149.6 millones de kilómetros</strong>.</p>
+            <p>Una curiosidad fascinante que nos conecta directamente con él: debido a la distancia y a la velocidad constante de la luz en el vacío, los rayos solares que iluminan los campos de Talca, Curicó y Linares **tardan exactamente 8 minutos y 20 segundos** en viajar desde la superficie solar hasta tocar nuestros ojos o paneles.</p>
+
+            <h3>2. Beneficios vitales de la luz solar para los ecosistemas</h3>
+            <p>Sin la luz y el calor del sol, la vida en la Tierra sería imposible. Sus beneficios ecológicos directos incluyen:</p>
+            <ul>
+                <li><strong>La Fotosíntesis:</strong> Las plantas y cultivos de la Región del Maule utilizan la energía lumínica para transformar el dióxido de carbono y el agua en nutrientes y oxígeno, constituyendo la base de toda la cadena trófica.</li>
+                <li><strong>Regulación Climática y Ciclo del Agua:</strong> La radiación solar impulsa la evaporación oceánica y continental, generando los vientos, las corrientes marinas y las precipitaciones que alimentan nuestros ríos y embalses.</li>
+                <li><strong>Termorregulación y Ritmos Biológicos:</strong> Mantiene la temperatura media del planeta apta para la vida y regula los ciclos circadianos de los seres vivos.</li>
+            </ul>
+
+            <h3>3. ¿Qué es exactamente la luz solar y la irradiancia?</h3>
+            <p>Desde la física, la luz solar es radiación electromagnética compuesta por diminutas partículas de energía llamadas <strong>fotones</strong>. Cuando hablamos de aprovechar esta energía, medimos un concepto clave llamado <strong>irradiancia solar</strong>.</p>
+            <p>La <em>irradiancia</em> es la potencia de la radiación solar que incide sobre una superficie específica, medida habitualmente en vatios por metro cuadrado ($\text{W/m}^2$). Cuanto mayor es la irradiancia en un lugar y momento determinados, mayor es la cantidad de energía que nuestros paneles pueden transformar en electricidad.</p>
+
+            <h3>4. Irradiancia en Chile y la Región del Maule</h3>
+            <p>Chile posee algunos de los niveles de radiación solar más altos del planeta, especialmente en el Desierto de Atacama en el norte. Sin embargo, <strong>la Región del Maule cuenta con condiciones sumamente competitivas y equilibradas</strong>:</p>
+            <p>Aunque no tenemos la radiación extrema del norte, la combinación de una excelente insolación durante la primavera y el verano, sumada a temperaturas ambientales templadas o frías en ciertas épocas, permite que los paneles solares fotovoltaicos operen de manera muy eficiente (ya que los módulos fotovoltaicos rinden mejor cuando no sufren de recalentamiento extremo). Esto hace que el desarrollo residencial, industrial y la <em>agrivoltaica</em> en los valles del Maule tengan un rendimiento técnico y económico sobresaliente.</p>
         </section>
 
         <section id="maule">
             <h2>Condiciones energéticas en la Región del Maule</h2>
-            <p>La Región del Maule posee condiciones geográficas y climáticas excepcionales para el desarrollo solar. A pesar de contar con estaciones lluviosas marcadas en invierno, la alta radiación durante la primavera y el verano —sumada a las bajas temperaturas ambientales que optimizan el rendimiento técnico de los paneles solares— sitúa a zonas como Talca, Curicó, Linares y Cauquenes con un potencial sumamente competitivo.</p>
+            <p>La Región del Maule posee condiciones geográficas y climáticas excepcionales para el desarrollo solar. A pesar de contar con estaciones lluviosas marcadas en invierno, la alta radiación durante la primavera y el verano sitúa a zonas como Talca, Curicó, Linares y Cauquenes con un potencial sumamente competitivo.</p>
             <p>Asimismo, la fuerte presencia del sector agroindustrial abre una oportunidad única para integrar soluciones de <strong>agrivoltaica</strong>, permitiendo generar energía limpia en los mismos terrenos donde se cultiva, protegiendo a los cultivos de la radiación excesiva y optimizando el recurso hídrico.</p>
         </section>
 
         <section id="net-billing">
-            <h2>Guía definitiva de Net Billing en el Maule: Cómo inyectar tus excedentes solares y reducir tu cuenta de luz</h2>
+            <h2>Guía definitiva de Net Billing en el Maule: Cómo inyectar tus excedentes solares</h2>
 
-            <p>Ya sea que tengas una vivienda en los sectores residenciales de Talca, un fundo agrícola en Linares o una pyme comercial en Curicó, la ley de generación distribuida te permite no solo generar tu propia energía, sino también <strong>inyectar los excedentes a la red eléctrica y recibir un pago por ello</strong>.</p>
-
-            <p>En este artículo te explicamos en detalle qué es el Net Billing, cómo funciona en la práctica en el Maule y cuáles son los pasos normativos para implementarlo con las distribuidoras locales como CGE o cooperativas eléctricas.</p>
+            <p>Ya sea que tengas una vivienda en los sectores residenciales de Talca, un fundo agrícola en Linares o una pyme comercial en Curicó, la ley de generación distribuida te permite no solo generar tu propia energía, sino también <strong>inyectar los excedentes a la red eléctrica y recibir un descuento monetario en tu boleta</strong>.</p>
 
             <h3>¿Cómo opera el Net Billing en la Región del Maule?</h3>
-            <p>El Net Billing (regulado por la Ley 20.571 y su actualización en la Ley 21.118) es el mecanismo mediante el cual los clientes de empresas distribuidoras de electricidad pueden instalar sistemas de generación de energías renovables (principalmente paneles solares fotovoltaicos) para autoconsumo.</p>
-
-            <p>¿Qué sucede cuando tus paneles producen más energía de la que consumes en el momento? Esa energía sobrante (excedente) se canaliza automáticamente hacia la red pública de distribución. A cambio, la compañía eléctrica te otorga un <strong>descuento monetario en tu boleta del mes siguiente</strong> por cada kilovatio-hora (kWh) inyectado.</p>
+            <p>El Net Billing (regulado por la Ley 20.571 y su actualización en la Ley 21.118) permite a los clientes instalar sistemas de energías renovables para autoconsumo. ¿Qué sucede cuando tus paneles producen más de lo que consumes? La energía sobrante viaja a la red pública de distribución y la compañía eléctrica (como CGE) te compensa económicamente en tu boleta del mes siguiente.</p>
 
             <ul>
                 <li><strong>Autoconsumo instantáneo:</strong> La energía del sol alimenta tus artefactos durante el día de forma gratuita.</li>
-                <li><strong>Inyección de excedentes:</strong> Lo que sobra viaja a la red y se valora económicamente a precio de inyección regulado por la Comisión Nacional de Energía (CNE).</li>
-                <li><strong>Potencia máxima permitida:</strong> La normativa permite conectar sistemas de hasta 300 kW de potencia instalada, cubriendo desde hogares hasta medianas empresas agrícolas.</li>
+                <li><strong>Inyección de excedentes:</strong> Lo que sobra se valora a precio regulado por la Comisión Nacional de Energía (CNE).</li>
+                <li><strong>Potencia máxima:</strong> Hasta 300 kW permitidos para hogares, comercios y medianas empresas.</li>
             </ul>
 
-            <h3>Beneficios específicos de instalar Net Billing en el Maule</h3>
+            <h3>Beneficios específicos en el Maule</h3>
             <table>
                 <thead>
                     <tr>
@@ -132,34 +155,21 @@
                 <tbody>
                     <tr>
                         <td><strong>Residencial (Casas / Parcelas)</strong></td>
-                        <td>Abatimiento de hasta un 80% o 90% en la cuenta de luz mensual durante los meses de primavera y verano.</td>
+                        <td>Abatimiento de hasta un 80% o 90% en la cuenta de luz mensual en primavera y verano.</td>
                         <td>Retorno de inversión estimado entre 4 y 6 años.</td>
                     </tr>
                     <tr>
                         <td><strong>Agrícola (Fundos y Viñas)</strong></td>
-                        <td>Sincronización perfecta entre las horas de mayor radiación solar y el funcionamiento de bombas de riego profundo.</td>
-                        <td>Reducción drástica de costos operacionales fijos en épocas críticas de sequía o riego.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Comercial / Pymes</strong></td>
-                        <td>Estabilización de los costos operacionales frente a las alzas tarifarias de la electricidad.</td>
-                        <td>Mejora en la imagen corporativa bajo criterios de sostenibilidad ambiental.</td>
+                        <td>Sincronización perfecta entre las horas de mayor sol y el funcionamiento de bombas de riego profundo.</td>
+                        <td>Reducción drástica de costos operacionales fijos en épocas de riego.</td>
                     </tr>
                 </tbody>
             </table>
-
-            <h3>Paso a paso: ¿Cómo tramitar tu conexión en la zona?</h3>
-            <ol>
-                <li><strong>Estudio de Factibilidad y Dimensionamiento:</strong> Un profesional analiza tus boletas eléctricas y el espacio disponible.</li>
-                <li><strong>Instalación del Sistema:</strong> Montaje de paneles, inversores y medidor bidireccional certificado.</li>
-                <li><strong>Declaración en la SEC (TE4):</strong> El instalador inscribe el proyecto en la Superintendencia de Electricidad y Combustibles.</li>
-                <li><strong>Solicitud a la Distribuidora:</strong> Envío de carpeta técnica a CGE u otra distribuidora para la aprobación y habilitación del medidor bidireccional.</li>
-            </ol>
         </section>
 
         <section id="noticias">
             <h2>Noticias y Actualidad Energética</h2>
-            <p>Monitoreo de políticas públicas, fondos concursables y regulaciones del sector energético en Chile y la región.</p>
+            <p>Monitoreo de políticas públicas, fondos concursables y regulaciones del sector energético en la región.</p>
             
             <div class="grid-cards">
                 <div class="card">
@@ -182,7 +192,7 @@
                         </div>
                         <span class="tag">Regulación</span>
                         <h3>Actualización de la normativa de Net Billing y tarifas eléctricas</h3>
-                        <p>Análisis de los cambios normativos implementados por la Comisión Nacional de Energía para la inyección de excedentes.</p>
+                        <p>Análisis de los cambios normativos implementados por la Comisión Nacional de Energía.</p>
                     </div>
                     <a href="noticias/net-billing-cne.html" class="btn-leer">Leer noticia &rarr;</a>
                 </div>
@@ -203,7 +213,7 @@
 
         <section id="blog">
             <h2>Blog Solar Maule</h2>
-            <p>Artículos técnicos, consejos prácticos y análisis especializados escritos para la comunidad de la Región del Maule.</p>
+            <p>Artículos técnicos, consejos prácticos y debates abiertos con la comunidad maulina.</p>
             
             <div class="grid-cards">
                 <div class="card">
@@ -214,9 +224,9 @@
                         </div>
                         <span class="tag">Equipamiento</span>
                         <h3>¿Cómo elegir el inversor solar ideal para tu hogar o parcela?</h3>
-                        <p>Claves para seleccionar equipos inversores que soporten las variaciones de red y maximicen la eficiencia de tus paneles.</p>
+                        <p>Claves para seleccionar equipos inversores que soporten las variaciones de red y maximicen la eficiencia.</p>
                     </div>
-                    <a href="blog/inversor-solar.html" class="btn-leer">Leer artículo completo &rarr;</a>
+                    <a href="blog/inversor-solar.html" class="btn-leer">Participar en el Blog &rarr;</a>
                 </div>
                 <div class="card">
                     <div>
@@ -226,12 +236,25 @@
                         </div>
                         <span class="tag">Rendimiento</span>
                         <h3>Limpieza de paneles solares: Mitos y realidades en época de polen y polvo</h3>
-                        <p>Por qué el rendimiento de tus paneles puede disminuir y con qué frecuencia debes realizarles mantenimiento preventivo en el Maule.</p>
+                        <p>Por qué el rendimiento de tus paneles puede disminuir y con qué frecuencia realizarles mantenimiento.</p>
                     </div>
                     <a href="blog/limpieza-paneles.html" class="btn-leer">Leer artículo completo &rarr;</a>
                 </div>
             </div>
         </section>
+
+        <!-- BANNER INSTITUCIONAL DE APOYO Y ALIANZAS -->
+        <div class="institutional-banner">
+            <h3>Iniciativa impulsada con proyección de respaldo institucional y académico</h3>
+            <p style="font-size: 0.9rem; color: #64748b; max-width: 700px; margin: 0 auto;">Este centro educativo e informativo abierto a la comunidad busca consolidar alianzas estratégicas con organismos públicos, asociaciones gremiales y casas de estudio superior para acelerar la transición energética justa.</p>
+            <div class="partners-grid">
+                <div class="partner-badge">Ministerio de Energía (En gestión)</div>
+                <div class="partner-badge">Seremi de Energía Región del Maule</div>
+                <div class="partner-badge">ACESOL (Asoc. Chilena de Energía Solar)</div>
+                <div class="partner-badge">Ministerio de Educación</div>
+                <div class="partner-badge">Universidades Locales (Talca / UCM)</div>
+            </div>
+        </div>
 
     </main>
 
