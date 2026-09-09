@@ -24,8 +24,9 @@
         nav .logo .solar-text { color: var(--accent); }
         nav .logo .maule-text { color: #fff; }
         nav ul { display: flex; list-style: none; gap: 1.5rem; flex-wrap: wrap; }
-        nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
-        nav ul li a:hover { color: white; }
+        /* Menú superior con texto más definido y visible */
+        nav ul li a { color: #ffffff; font-weight: 500; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        nav ul li a:hover { color: var(--accent); }
 
         header { background: linear-gradient(135deg, var(--secondary), #1f2937); color: white; padding: 4rem 2rem; text-align: center; }
         header h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #fff; }
@@ -35,9 +36,10 @@
         
         .container { max-width: 950px; margin: -3rem auto 3rem auto; background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); position: relative; }
         
-        section { scroll-margin-top: 90px; margin-bottom: 3rem; }
+        /* Ajuste de espacios verticales entre secciones */
+        section { scroll-margin-top: 90px; margin-bottom: 2rem; }
 
-        h2 { color: var(--secondary); font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 3px solid var(--accent); padding-bottom: 0.3rem; display: inline-block; }
+        h2 { color: var(--secondary); font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 3px solid var(--accent); padding-bottom: 0.3rem; display: inline-block; }
         h3 { color: var(--secondary); font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
         p { margin-bottom: 1.2rem; }
         ul, ol { margin-bottom: 1.2rem; padding-left: 1.5rem; }
@@ -56,23 +58,25 @@
         .card a.btn-leer:hover { text-decoration: underline; }
 
         /* Estilo de banner institucional */
-        .institutional-banner { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 2rem; margin-top: 4rem; text-align: center; }
+        .institutional-banner { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 2rem; margin-top: 3rem; text-align: center; }
         .institutional-banner h3 { color: var(--secondary); margin-bottom: 1rem; }
         .partners-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; align-items: center; margin-top: 1.5rem; }
         .partner-badge { background: white; border: 1px solid #e2e8f0; padding: 0.8rem 1.2rem; border-radius: 6px; font-size: 0.85rem; font-weight: bold; color: var(--secondary); box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
 
-        footer { text-align: center; padding: 2.5rem 2rem; background: var(--secondary); color: white; font-size: 0.95rem; margin-top: 4rem; }
+        footer { text-align: center; padding: 2.5rem 2rem; background: var(--secondary); color: white; font-size: 0.95rem; margin-top: 3rem; }
         footer p { margin-bottom: 0.5rem; }
         footer a { color: var(--accent); text-decoration: none; }
         footer a:hover { text-decoration: underline; }
         .back-to-top { display: inline-block; margin-top: 1rem; color: #cbd5e1; font-size: 0.9rem; text-decoration: none; }
         .back-to-top:hover { color: white; }
 
+        /* Código responsivo optimizado para celulares */
         @media(max-width: 768px) {
             .container { margin: 0; border-radius: 0; padding: 1.5rem; }
             header { padding: 2.5rem 1rem; }
             header h1 { font-size: 2rem; }
-            nav ul { display: none; }
+            nav { padding: 1rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+            nav ul { display: flex; justify-content: center; gap: 1rem; }
         }
     </style>
 </head>
@@ -100,7 +104,7 @@
         <section id="origen">
             <h2>El Origen y la Ciencia de la Energía Solar</h2>
             
-            <p>Antes de entender cómo capturamos la energía del sol en nuestros techos o campos, es fundamental comprender qué es nuestra estrella y cómo viaja esa energía hasta nuestro planeta. Este conocimiento es la base para entender por qué la tecnología fotovoltaica es tan potente en nuestra región.</p>
+            <p>Antes de entender cómo capturamos la energía del sol en nuestros techos o campos, es fundamental comprender qué es nuestra estrella y cómo viaja esa energía hasta nuestro planeta. Este conocimiento es la base para entender el proceso de <strong>transición energética</strong>: un cambio estructural sistémico a largo plazo en el modelo de suministro y consumo global, enfocado en reemplazar los combustibles fósiles por fuentes renovables de bajas emisiones, impulsando la descentralización de la generación eléctrica, la eficiencia y la gestión inteligente de redes.</p>
 
             <h3>1. El Sol: Nuestra estrella nodriza</h3>
             <p>El Sol es una gigantesca esfera de gas caliente (principalmente hidrógeno y helio) que funciona como un incesante reactor de fusión nuclear en el centro de nuestro sistema solar. Su diámetro es unas 109 veces mayor que el de la Tierra y se encuentra a una distancia promedio de <strong>149.6 millones de kilómetros</strong>.</p>
@@ -116,7 +120,7 @@
 
             <h3>3. ¿Qué es exactamente la luz solar y la irradiancia?</h3>
             <p>Desde la física, la luz solar es radiación electromagnética compuesta por diminutas partículas de energía llamadas <strong>fotones</strong>. Cuando hablamos de aprovechar esta energía, medimos un concepto clave llamado <strong>irradiancia solar</strong>.</p>
-            <p>La <em>irradiancia</em> es la potencia de la radiación solar que incide sobre una superficie específica, medida habitualmente en vatios por metro cuadrado ($\text{W/m}^2$). Cuanto mayor es la irradiancia en un lugar y momento determinados, mayor es la cantidad de energía que nuestros paneles pueden transformar en electricidad.</p>
+            <p>La <em>irradiancia</em> representa la potencia instantánea de la radiación solar que incide sobre una unidad de superficie. Se cuantifica formalmente en vatios por metro cuadrado (<span style="font-family: monospace; font-weight: bold; background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">W/m²</span>). Cuanto mayor es este flujo de potencia por metro cuadrado en un lugar y momento determinados, mayor es la densidad energética disponible para que los paneles la transformen en electricidad.</p>
 
             <h3>4. Irradiancia en Chile y la Región del Maule</h3>
             <p>Chile posee algunos de los niveles de radiación solar más altos del planeta, especialmente en el Desierto de Atacama en el norte. Sin embargo, <strong>la Región del Maule cuenta con condiciones sumamente competitivas y equilibradas</strong>:</p>
