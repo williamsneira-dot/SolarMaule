@@ -9,8 +9,7 @@
         :root {
             --primary: #f59e0b;
             --primary-dark: #d97706;
-            --secondary: #4b515d; /* Gris grafito equilibrado global */
-            --secondary-hover: #4b5563;
+            --secondary: #4b515d;
             --accent: #f59e0b;
             --light: #f8fafc;
             --text: #334155;
@@ -19,59 +18,55 @@
         html { scroll-behavior: smooth; }
         body { color: var(--text); background-color: var(--light); line-height: 1.7; }
         
-        nav { background: var(--secondary); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        nav .logo { font-weight: bold; font-size: 1.2rem; color: #fff; text-decoration: none; }
+        nav { background: var(--secondary); color: white; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        nav .logo { font-weight: bold; font-size: 1.1rem; color: #fff; text-decoration: none; }
         nav .logo .solar-text { color: var(--accent); }
         nav .logo .maule-text { color: #fff; }
-        nav ul { display: flex; list-style: none; gap: 1.5rem; flex-wrap: wrap; }
-        nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        nav ul { display: flex; list-style: none; gap: 1rem; flex-wrap: wrap; }
+        nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
         nav ul li a:hover { color: white; }
 
-        header { background: linear-gradient(135deg, var(--secondary), #1f2937); color: white; padding: 4rem 2rem; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #fff; }
+        header { background: linear-gradient(135deg, var(--secondary), #1f2937); color: white; padding: 3rem 1rem; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 0.8rem; color: #fff; }
         header h1 .solar-text { color: var(--accent); }
-        header h1 .maule-text { color: #fff; }
-        header p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+        header p { font-size: 1rem; max-width: 700px; margin: 0 auto; opacity: 0.9; padding: 0 0.5rem; }
         
-        .container { max-width: 950px; margin: -3rem auto 3rem auto; background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); position: relative; }
+        .container { max-width: 950px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
         
-        section { scroll-margin-top: 90px; margin-bottom: 3rem; }
+        section { scroll-margin-top: 80px; margin-bottom: 2.5rem; }
 
-        h2 { color: var(--secondary); font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 3px solid var(--accent); padding-bottom: 0.3rem; display: inline-block; }
-        h3 { color: var(--secondary); font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
-        p { margin-bottom: 1.2rem; }
-        ul, ol { margin-bottom: 1.2rem; padding-left: 1.5rem; }
-        li { margin-bottom: 0.5rem; }
+        h2 { color: var(--secondary); font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 3px solid var(--accent); padding-bottom: 0.3rem; display: inline-block; }
+        h3 { color: var(--secondary); font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        p { margin-bottom: 1rem; font-size: 0.98rem; }
+        ul, ol { margin-bottom: 1rem; padding-left: 1.2rem; }
+        li { margin-bottom: 0.4rem; font-size: 0.98rem; }
         
-        table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.95rem; }
-        th, td { border: 1px solid #cbd5e1; padding: 12px; text-align: left; }
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; display: block; overflow-x: auto; }
+        th, td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; }
         th { background-color: #f1f5f9; color: var(--secondary); }
 
-        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
-        .card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
-        .card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .card-meta { font-size: 0.8rem; color: #64748b; margin-bottom: 0.5rem; display: flex; justify-content: space-between; }
-        .card span.tag { font-size: 0.85rem; color: var(--primary-dark); font-weight: bold; text-transform: uppercase; }
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin: 1.2rem 0; }
+        .card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1.2rem; border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-meta { font-size: 0.75rem; color: #64748b; margin-bottom: 0.5rem; display: flex; justify-content: space-between; }
+        .card span.tag { font-size: 0.8rem; color: var(--primary-dark); font-weight: bold; text-transform: uppercase; }
         .card a.btn-leer { display: inline-block; margin-top: 1rem; color: var(--primary-dark); font-weight: bold; text-decoration: none; font-size: 0.9rem; }
         .card a.btn-leer:hover { text-decoration: underline; }
 
-        /* Estilo de banner institucional */
-        .institutional-banner { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 2rem; margin-top: 4rem; text-align: center; }
-        .institutional-banner h3 { color: var(--secondary); margin-bottom: 1rem; }
-        .partners-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; align-items: center; margin-top: 1.5rem; }
-        .partner-badge { background: white; border: 1px solid #e2e8f0; padding: 0.8rem 1.2rem; border-radius: 6px; font-size: 0.85rem; font-weight: bold; color: var(--secondary); box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .institutional-banner { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 8px; padding: 1.5rem; margin-top: 3rem; text-align: center; }
+        .institutional-banner h3 { color: var(--secondary); margin-bottom: 1rem; font-size: 1.1rem; }
+        .partners-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; align-items: center; margin-top: 1.2rem; }
+        .partner-badge { background: white; border: 1px solid #e2e8f0; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: bold; color: var(--secondary); }
 
-        footer { text-align: center; padding: 2.5rem 2rem; background: var(--secondary); color: white; font-size: 0.95rem; margin-top: 4rem; }
+        footer { text-align: center; padding: 2rem 1rem; background: var(--secondary); color: white; font-size: 0.9rem; margin-top: 3rem; }
         footer p { margin-bottom: 0.5rem; }
         footer a { color: var(--accent); text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        .back-to-top { display: inline-block; margin-top: 1rem; color: #cbd5e1; font-size: 0.9rem; text-decoration: none; }
+        .back-to-top { display: inline-block; margin-top: 1rem; color: #cbd5e1; font-size: 0.85rem; text-decoration: none; }
         .back-to-top:hover { color: white; }
 
         @media(max-width: 768px) {
-            .container { margin: 0; border-radius: 0; padding: 1.5rem; }
-            header { padding: 2.5rem 1rem; }
-            header h1 { font-size: 2rem; }
+            .container { margin: 0.5rem; border-radius: 6px; padding: 1.2rem; }
+            header { padding: 2rem 1rem; }
+            header h1 { font-size: 1.7rem; }
             nav ul { display: none; }
         }
     </style>
@@ -84,8 +79,8 @@
             <li><a href="#origen">Origen y Ciencia</a></li>
             <li><a href="#maule">En el Maule</a></li>
             <li><a href="#net-billing">Net Billing</a></li>
-            <li><a href="#Noticias">Noticias</a></li>
-            <li><a href="#Blog">Blog</a></li>
+            <li><a href="#noticias">Noticias</a></li>
+            <li><a href="#blog">Blog</a></li>
         </ul>
     </nav>
 
@@ -96,100 +91,58 @@
 
     <main class="container">
 
-        <!-- NUEVA SECCIÓN EDUCATIVA: ORIGEN Y CIENCIA SOLAR -->
         <section id="origen">
             <h2>El Origen y la Ciencia de la Energía Solar</h2>
-            
-            <p>Antes de entender cómo capturamos la energía del sol en nuestros techos o campos, es fundamental comprender qué es nuestra estrella y cómo viaja esa energía hasta nuestro planeta. Este conocimiento es la base para entender por qué la tecnología fotovoltaica es tan potente en nuestra región.</p>
+            <p>Antes de entender cómo capturamos la energía del sol en nuestros techos o campos, es fundamental comprender qué es nuestra estrella y cómo viaja esa energía hasta nuestro planeta.</p>
 
             <h3>1. El Sol: Nuestra estrella nodriza</h3>
-            <p>El Sol es una gigantesca esfera de gas caliente (principalmente hidrógeno y helio) que funciona como un incesante reactor de fusión nuclear en el centro de nuestro sistema solar. Su diámetro es unas 109 veces mayor que el de la Tierra y se encuentra a una distancia promedio de <strong>149.6 millones de kilómetros</strong>.</p>
-            <p>Una curiosidad fascinante que nos conecta directamente con él: debido a la distancia y a la velocidad constante de la luz en el vacío, los rayos solares que iluminan los campos de Talca, Curicó y Linares **tardan exactamente 8 minutos y 20 segundos** en viajar desde la superficie solar hasta tocar nuestros ojos o paneles.</p>
+            <p>El Sol es una gigantesca esfera de gas caliente que funciona como un reactor de fusión nuclear. Su diámetro es 109 veces mayor que el de la Tierra y se encuentra a una distancia promedio de <strong>149.6 millones de kilómetros</strong>.</p>
+            <p>Los rayos solares que iluminan los campos de Talca, Curicó y Linares **tardan exactamente 8 minutos y 20 segundos** en viajar desde la superficie solar hasta tocar nuestros paneles.</p>
 
-            <h3>2. Beneficios vitales de la luz solar para los ecosistemas</h3>
-            <p>Sin la luz y el calor del sol, la vida en la Tierra sería imposible. Sus beneficios ecológicos directos incluyen:</p>
+            <h3>2. Beneficios vitales para los ecosistemas</h3>
             <ul>
-                <li><strong>La Fotosíntesis:</strong> Las plantas y cultivos de la Región del Maule utilizan la energía lumínica para transformar el dióxido de carbono y el agua en nutrientes y oxígeno, constituyendo la base de toda la cadena trófica.</li>
-                <li><strong>Regulación Climática y Ciclo del Agua:</strong> La radiación solar impulsa la evaporación oceánica y continental, generando los vientos, las corrientes marinas y las precipitaciones que alimentan nuestros ríos y embalses.</li>
-                <li><strong>Termorregulación y Ritmos Biológicos:</strong> Mantiene la temperatura media del planeta apta para la vida y regula los ciclos circadianos de los seres vivos.</li>
+                <li><strong>La Fotosíntesis:</strong> Las plantas y cultivos del Maule utilizan la energía lumínica para transformar nutrientes y oxígeno.</li>
+                <li><strong>Regulación Climática:</strong> La radiación solar impulsa el ciclo del agua y las precipitaciones que alimentan nuestros ríos.</li>
+                <li><strong>Termorregulación:</strong> Mantiene la temperatura idónea y regula los ciclos biológicos.</li>
             </ul>
 
-            <h3>3. ¿Qué es exactamente la luz solar y la irradiancia?</h3>
-            <p>Desde la física, la luz solar es radiación electromagnética compuesta por diminutas partículas de energía llamadas <strong>fotones</strong>. Cuando hablamos de aprovechar esta energía, medimos un concepto clave llamado <strong>irradiancia solar</strong>.</p>
-            <p>La <em>irradiancia</em> es la potencia de la radiación solar que incide sobre una superficie específica, medida habitualmente en vatios por metro cuadrado ($\text{W/m}^2$). Cuanto mayor es la irradiancia en un lugar y momento determinados, mayor es la cantidad de energía que nuestros paneles pueden transformar en electricidad.</p>
+            <h3>3. ¿Qué es la irradiancia solar?</h3>
+            <p>La luz solar está compuesta por fotones. Medimos su intensidad mediante la <strong>irradiancia solar</strong>, que es la potencia de la radiación que incide sobre una superficie, medida en vatios por metro cuadrado ($\text{W/m}^2$).</p>
 
             <h3>4. Irradiancia en Chile y la Región del Maule</h3>
-            <p>Chile posee algunos de los niveles de radiación solar más altos del planeta, especialmente en el Desierto de Atacama en el norte. Sin embargo, <strong>la Región del Maule cuenta con condiciones sumamente competitivas y equilibradas</strong>:</p>
-            <p>Aunque no tenemos la radiación extrema del norte, la combinación de una excelente insolación durante la primavera y el verano, sumada a temperaturas ambientales templadas o frías en ciertas épocas, permite que los paneles solares fotovoltaicos operen de manera muy eficiente (ya que los módulos fotovoltaicos rinden mejor cuando no sufren de recalentamiento extremo). Esto hace que el desarrollo residencial, industrial y la <em>agrivoltaica</em> en los valles del Maule tengan un rendimiento técnico y económico sobresaliente.</p>
+            <p>Aunque el norte de Chile lidera en radiación extrema, <strong>la Región del Maule cuenta con condiciones sumamente competitivas</strong>. La combinación de una gran insolación primaveral y veraniega con temperaturas moderadas evita el sobrecalentamiento de los módulos, optimizando el rendimiento residencial y la agrivoltaica regional.</p>
         </section>
 
         <section id="maule">
             <h2>Condiciones energéticas en la Región del Maule</h2>
-            <p>La Región del Maule posee condiciones geográficas y climáticas excepcionales para el desarrollo solar. A pesar de contar con estaciones lluviosas marcadas en invierno, la alta radiación durante la primavera y el verano sitúa a zonas como Talca, Curicó, Linares y Cauquenes con un potencial sumamente competitivo.</p>
-            <p>Asimismo, la fuerte presencia del sector agroindustrial abre una oportunidad única para integrar soluciones de <strong>agrivoltaica</strong>, permitiendo generar energía limpia en los mismos terrenos donde se cultiva, protegiendo a los cultivos de la radiación excesiva y optimizando el recurso hídrico.</p>
+            <p>Las características geográficas y climáticas de Talca, Curicó, Linares y Cauquenes favorecen la adopción solar. La agroindustria maulina aprovecha la agrivoltaica para generar energía limpia y proteger sus cultivos simultáneamente.</p>
         </section>
 
         <section id="net-billing">
-            <h2>Guía definitiva de Net Billing en el Maule: Cómo inyectar tus excedentes solares</h2>
-
-            <p>Ya sea que tengas una vivienda en los sectores residenciales de Talca, un fundo agrícola en Linares o una pyme comercial en Curicó, la ley de generación distribuida te permite no solo generar tu propia energía, sino también <strong>inyectar los excedentes a la red eléctrica y recibir un descuento monetario en tu boleta</strong>.</p>
-
-            <h3>¿Cómo opera el Net Billing en la Región del Maule?</h3>
-            <p>El Net Billing (regulado por la Ley 20.571 y su actualización en la Ley 21.118) permite a los clientes instalar sistemas de energías renovables para autoconsumo. ¿Qué sucede cuando tus paneles producen más de lo que consumes? La energía sobrante viaja a la red pública de distribución y la compañía eléctrica (como CGE) te compensa económicamente en tu boleta del mes siguiente.</p>
-
+            <h2>Guía definitiva de Net Billing en el Maule</h2>
+            <p>La ley de generación distribuida permite inyectar los excedentes de energía solar a la red pública (como CGE) y recibir un descuento monetario en la boleta.</p>
             <ul>
-                <li><strong>Autoconsumo instantáneo:</strong> La energía del sol alimenta tus artefactos durante el día de forma gratuita.</li>
-                <li><strong>Inyección de excedentes:</strong> Lo que sobra se valora a precio regulado por la Comisión Nacional de Energía (CNE).</li>
-                <li><strong>Potencia máxima:</strong> Hasta 300 kW permitidos para hogares, comercios y medianas empresas.</li>
+                <li><strong>Autoconsumo instantáneo:</strong> La energía alimenta tus aparatos durante el día de forma gratuita.</li>
+                <li><strong>Inyección de excedentes:</strong> El sobrante se valora a precio regulado por la CNE.</li>
+                <li><strong>Potencia máxima:</strong> Hasta 300 kW para hogares, comercios y pymes.</li>
             </ul>
-
-            <h3>Beneficios específicos en el Maule</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Sector</th>
-                        <th>Beneficio Principal en el Maule</th>
-                        <th>Impacto Económico</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Residencial (Casas / Parcelas)</strong></td>
-                        <td>Abatimiento de hasta un 80% o 90% en la cuenta de luz mensual en primavera y verano.</td>
-                        <td>Retorno de inversión estimado entre 4 y 6 años.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Agrícola (Fundos y Viñas)</strong></td>
-                        <td>Sincronización perfecta entre las horas de mayor sol y el funcionamiento de bombas de riego profundo.</td>
-                        <td>Reducción drástica de costos operacionales fijos en épocas de riego.</td>
-                    </tr>
-                </tbody>
-            </table>
         </section>
 
-        <section id="Noticias">
+        <section id="noticias">
             <h2>Noticias y Actualidad Energética</h2>
-            <p>Monitoreo de políticas públicas, fondos concursables y regulaciones del sector energético en la región.</p>
-            
             <div class="grid-cards">
                 <div class="card">
                     <div>
-                        <div class="card-meta">
-                            <span>Gobierno Regional</span>
-                            <span>Septiembre 2026</span>
-                        </div>
+                        <div class="card-meta"><span>Gobierno Regional</span><span>Septiembre 2026</span></div>
                         <span class="tag">Incentivos</span>
                         <h3>Nuevos fondos de Corfo para proyectos fotovoltaicos en pymes del Maule</h3>
-                        <p>Detalles sobre las líneas de cofinanciamiento destinadas a la adopción tecnológica y eficiencia energética regional.</p>
+                        <p>Líneas de cofinanciamiento para adopción tecnológica y eficiencia energética.</p>
                     </div>
                     <a href="Noticias/fondos-corfo.html" class="btn-leer">Leer noticia &rarr;</a>
                 </div>
                 <div class="card">
                     <div>
-                        <div class="card-meta">
-                            <span>CNE Chile</span>
-                            <span>Septiembre 2026</span>
-                        </div>
+                        <div class="card-meta"><span>CNE Chile</span><span>Septiembre 2026</span></div>
                         <span class="tag">Regulación</span>
                         <h3>Actualización de la normativa de Net Billing y tarifas eléctricas</h3>
                         <p>Análisis de los cambios normativos implementados por la Comisión Nacional de Energía.</p>
@@ -198,61 +151,49 @@
                 </div>
                 <div class="card">
                     <div>
-                        <div class="card-meta">
-                            <span>Agrivoltaica</span>
-                            <span>Septiembre 2026</span>
-                        </div>
+                        <div class="card-meta"><span>Agrivoltaica</span><span>Septiembre 2026</span></div>
                         <span class="tag">Innovación</span>
                         <h3>La revolución agrivoltaica: Cultivos y paneles solares compartiendo suelo en Talca</h3>
-                        <p>Cómo los fundos maulinos están maximizando el rendimiento agrícola y energético de forma simultánea.</p>
+                        <p>Cómo los fundos maulinos maximizan rendimiento agrícola y energético.</p>
                     </div>
                     <a href="Noticias/agrivoltaica-maule.html" class="btn-leer">Leer noticia &rarr;</a>
                 </div>
             </div>
         </section>
 
-        <section id="Blog">
+        <section id="blog">
             <h2>Blog Solar Maule</h2>
-            <p>Artículos técnicos, consejos prácticos y debates abiertos con la comunidad maulina.</p>
-            
             <div class="grid-cards">
                 <div class="card">
                     <div>
-                        <div class="card-meta">
-                            <span>Técnico</span>
-                            <span>Septiembre 2026</span>
-                        </div>
+                        <div class="card-meta"><span>Técnico</span><span>Septiembre 2026</span></div>
                         <span class="tag">Equipamiento</span>
                         <h3>¿Cómo elegir el inversor solar ideal para tu hogar o parcela?</h3>
-                        <p>Claves para seleccionar equipos inversores que soporten las variaciones de red y maximicen la eficiencia.</p>
+                        <p>Claves para seleccionar equipos que soporten variaciones de red.</p>
                     </div>
                     <a href="Blog/inversor-solar.html" class="btn-leer">Participar en el Blog &rarr;</a>
                 </div>
                 <div class="card">
                     <div>
-                        <div class="card-meta">
-                            <span>Mantenimiento</span>
-                            <span>Septiembre 2026</span>
-                        </div>
+                        <div class="card-meta"><span>Mantenimiento</span><span>Septiembre 2026</span></div>
                         <span class="tag">Rendimiento</span>
                         <h3>Limpieza de paneles solares: Mitos y realidades en época de polen y polvo</h3>
-                        <p>Por qué el rendimiento de tus paneles puede disminuir y con qué frecuencia realizarles mantenimiento.</p>
+                        <p>Por qué disminuye el rendimiento y frecuencias adecuadas de mantenimiento.</p>
                     </div>
-                    <a href="Blog/limpieza-paneles.html" class="btn-leer">Leer artículo completo &rarr;</a>
+                    <a href="Blog/limpieza-paneles.html" class="btn-leer">Leer artículo &rarr;</a>
                 </div>
             </div>
         </section>
 
-        <!-- BANNER INSTITUCIONAL DE APOYO Y ALIANZAS -->
         <div class="institutional-banner">
-            <h3>Iniciativa impulsada con proyección de respaldo institucional y académico</h3>
-            <p style="font-size: 0.9rem; color: #64748b; max-width: 700px; margin: 0 auto;">Este centro educativo e informativo abierto a la comunidad busca consolidar alianzas estratégicas con organismos públicos, asociaciones gremiales y casas de estudio superior para acelerar la transición energética justa.</p>
+            <h3>Iniciativa con proyección de respaldo institucional y académico</h3>
+            <p style="font-size: 0.9rem; color: #64748b; max-width: 700px; margin: 0 auto;">Buscamos consolidar alianzas con organismos públicos y casas de estudio superior para acelerar la transición energética justa en la región.</p>
             <div class="partners-grid">
-                <div class="partner-badge">Ministerio de Energía (En gestión)</div>
-                <div class="partner-badge">Seremi de Energía Región del Maule</div>
-                <div class="partner-badge">ACESOL (Asoc. Chilena de Energía Solar)</div>
+                <div class="partner-badge">Ministerio de Energía</div>
+                <div class="partner-badge">Seremi de Energía Maule</div>
+                <div class="partner-badge">ACESOL</div>
                 <div class="partner-badge">Ministerio de Educación</div>
-                <div class="partner-badge">Universidades Locales (Talca / UCM)</div>
+                <div class="partner-badge">Universidades Locales</div>
             </div>
         </div>
 
@@ -260,8 +201,7 @@
 
     <footer>
         <p>&copy; 2026 www.<span style="color:var(--accent)">solar</span>maule.cl</p>
-        <p>Todos los derechos reservados.</p>
-        <p>Contacto: <a href="mailto:contacto@solarmaule.cl" style="color: var(--accent); font-weight: bold;">contacto@solarmaule.cl</a></p>
+        <p>Contacto: <a href="mailto:contacto@solarmaule.cl">contacto@solarmaule.cl</a></p>
         <a href="#top" class="back-to-top">↑ Volver arriba</a>
     </footer>
 
