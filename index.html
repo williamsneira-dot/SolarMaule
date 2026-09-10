@@ -77,6 +77,8 @@
             header h1 { font-size: 2rem; }
             nav { padding: 1rem; flex-direction: column; gap: 0.8rem; text-align: center; }
             nav ul { display: flex; justify-content: center; gap: 1rem; }
+            /* Corrección del desfase de secciones al hacer clic en el menú móvil (debido a la altura expandida del nav) */
+            section { scroll-margin-top: 140px; }
         }
     </style>
 </head>
@@ -266,7 +268,7 @@
         <p>&copy; 2026 www.<span style="color:var(--accent)">solar</span>maule.cl</p>
         <p>Todos los derechos reservados.</p>
         <p>Contacto: <a href="mailto:contacto@solarmaule.cl" style="color: var(--accent); font-weight: bold;">contacto@solarmaule.cl</a></p>
-        <a href="#top" class="back-to-top">↑ Volver arriba</a>
+        <a href="#top" class="back-to-top">&uarr; Volver arriba</a>
     </footer>
 
 </body>
